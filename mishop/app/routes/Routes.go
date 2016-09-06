@@ -7,6 +7,10 @@ import (
 )
 
 func InitRourte(r *gin.Engine) {
+	r.GET("/tcl/test", func(c *gin.Context) {
+		controllers.TclController{}.Test(c)
+	})
+
 	r.GET("/product/welcome", func(c *gin.Context) {
 		controllers.TestController{}.Welcome(c)
 	})

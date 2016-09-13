@@ -11,6 +11,10 @@ func InitRourte(r *gin.Engine) {
 		controllers.TclController{}.Test(c)
 	})
 
+	r.GET("/tcl/from", func(c *gin.Context) {
+		controllers.TclController{}.From(c)
+	})
+
 	r.GET("/product/welcome", func(c *gin.Context) {
 		controllers.TestController{}.Welcome(c)
 	})

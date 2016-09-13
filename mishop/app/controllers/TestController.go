@@ -83,7 +83,7 @@ func (self TestController) Fjson(c *gin.Context) {
 
 func (self TestController) Test(c *gin.Context) {
 	var user models.User
-	user = models.UserModel{}.GetUser(1)
+	user = models.UserModel{}.GetUserById(1)
 	fmt.Print(user.Name)
 	c.JSON(http.StatusOK, user)
 }

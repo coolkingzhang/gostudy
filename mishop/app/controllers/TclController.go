@@ -2,10 +2,19 @@ package controllers
 
 import (
 	"fmt"
+	"mishop/app/models"
+	"mishop/app/utils"
+	"net/http"
 	"reflect"
 
 	"github.com/gin-gonic/gin"
+	"github.com/jinuljt/goformvalidator"
 )
+
+type Person struct {
+	Name string `validate:"min=5,max=10" schema:name"` //姓名长度 5-10个字节
+	Age  int    `validate:"min=1,max=150" schema:age"` //年龄1-150岁
+}
 
 type Bird struct {
 	Name           string
@@ -19,8 +28,18 @@ func (b *Bird) Flay() {
 type TclController struct {
 }
 
+func (self TclController) From(c *gin.Context) {
+	person := new(Person)
+	c.Request.ParseForm()
+	if err := goformvalidator.Validate(person, c.Request.Form); err != nil {
+		fmt.Printf("%v validate error due to %s", *person, err)
+	} else {
+		fmt.Printf("%v validate success", *person)
+	}
+}
+
 func (self TclController) Test(c *gin.Context) {
-	defer fmt.Print(" defer")
+	//	defer fmt.Print(" defer")
 	fmt.Print(bibao(123))
 	one, two, three := morer()
 	fmt.Print(one + two + three)
@@ -39,6 +58,14 @@ func (self TclController) Test(c *gin.Context) {
 	fmt.Print(Saturday)
 	fmt.Print(PI)
 
+	user := models.UserModel{}.GetUserAll()
+	c.JSON(http.StatusUnauthorized, user)
+
+	str := utils.EncryptUtil{}.Md5("123456")
+	fmt.Print(str)
+
+	str1 := utils.EncryptUtil{}.Hmac("123456", "key")
+	fmt.Print(str1)
 }
 
 //闭包

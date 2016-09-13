@@ -1,0 +1,15 @@
+https://github.com/smallnest/rpcx/blob/master/README-CN.md
+
+需要的包
+github.com/smallnest/rpcx
+github.com/hashicorp/net-rpc-msgpackrpc
+github.com/rcrowley/go-metrics
+github.com/coreos/etcd/client
+github.com/hashicorp/consul
+github.com/hashicorp/serf
+github.com/hashicorp/go-cleanhttp
+github.com/juju/ratelimit
+
+https://github.com/grpc/grpc
+https://github.com/samuel/go-zookeeper
+github.com/hashicorp/go-msgpack

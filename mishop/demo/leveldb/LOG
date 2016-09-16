@@ -170,3 +170,45 @@
 17:03:51.741359 db@open done T·46.0465ms
 17:03:51.741359 db@close closing
 17:03:51.742365 db@close done T·1.0055ms
+=============== Sep 15, 2016 (CST) ===============
+00:31:16.780652 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+00:31:16.816677 version@stat F·[4] S·568B[568B] Sc·[1.00]
+00:31:16.816677 db@open opening
+00:31:16.816677 journal@recovery F·1
+00:31:16.816677 journal@recovery recovering @36
+00:31:16.847699 memdb@flush created L0@38 N·2 S·142B "tclkey,d38":"tclkey,v37"
+00:31:16.851703 version@stat F·[5] S·710B[710B] Sc·[1.25]
+00:31:16.855705 db@janitor F·7 G·0
+00:31:16.855705 db@open done T·39.0279ms
+00:31:16.856706 table@compaction L0·5 -> L1·0 S·710B Q·39
+00:31:16.856706 db@close closing
+00:31:16.856706 table@build exiting
+00:31:16.856706 db@close done T·0
+=============== Sep 15, 2016 (CST) ===============
+00:31:26.845861 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+00:31:26.897896 version@stat F·[5] S·710B[710B] Sc·[1.25]
+00:31:26.897896 db@open opening
+00:31:26.897896 journal@recovery F·1
+00:31:26.897896 journal@recovery recovering @39
+00:31:27.035993 memdb@flush created L0@41 N·2 S·142B "tclkey,d41":"tclkey,v40"
+00:31:27.076022 version@stat F·[6] S·852B[852B] Sc·[1.50]
+00:31:27.106044 db@janitor F·8 G·0
+00:31:27.106044 db@open done T·208.1479ms
+00:31:27.106044 table@compaction L0·6 -> L1·0 S·852B Q·42
+00:31:27.106044 db@close closing
+00:31:27.106044 table@build exiting
+00:31:27.106044 db@close done T·0
+=============== Sep 15, 2016 (CST) ===============
+00:50:33.719884 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+00:50:33.746893 version@stat F·[6] S·852B[852B] Sc·[1.50]
+00:50:33.746893 db@open opening
+00:50:33.746893 journal@recovery F·1
+00:50:33.746893 journal@recovery recovering @42
+00:50:33.806935 memdb@flush created L0@44 N·2 S·142B "tclkey,d44":"tclkey,v43"
+00:50:33.807936 version@stat F·[7] S·994B[994B] Sc·[1.75]
+00:50:33.813942 db@janitor F·9 G·0
+00:50:33.813942 db@open done T·67.0493ms
+00:50:33.831953 table@compaction L0·7 -> L1·0 S·994B Q·46
+00:50:33.831953 db@close closing
+00:50:33.831953 table@build exiting
+00:50:33.832954 db@close done T·1.0009ms
